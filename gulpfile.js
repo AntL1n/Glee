@@ -4,7 +4,7 @@ const {
     watch,
     parallel,
     series
-} = require('gulp')
+} = require('gulp');
 const scss = require('gulp-sass');
 const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');

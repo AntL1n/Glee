@@ -110,9 +110,10 @@
         }
     }
 
-    // footer{
-    //     background-color: $white;
-    // }
+    footer a:hover {
+        color: $casper;
+        transition: color .5s;
+    }
 
     .footer-top {
         padding: 75px 0;
@@ -144,7 +145,7 @@
 
         &__logo {
             display: block;
-            padding-bottom: 27px;
+            padding-bottom: 30px;
         }
 
         // &__contact-item{
@@ -160,7 +161,18 @@
         }
 
         &__title {
+            color: $wine;
             margin-bottom: 25px;
+            font-size: 16px;
+            line-height: 21px;
+            @extend %DMSans-700;
+            text-transform: uppercase;
+            padding-top: 15px;
+        }
+
+        &__link {
+            font-size: 14px;
+            line-height: 32px;
         }
     }
 

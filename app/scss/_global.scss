@@ -2,22 +2,23 @@ body {
     font-size: 16px;
     line-height: 26px;
     color: $port;
+
     @extend %Rubik-400;
 }
 
 button {
+    outline: 1px solid transparent;
     border: none;
     line-height: 1;
     cursor: pointer;
-    outline: 1px solid transparent;
 }
 
 .container {
-    max-width: 1800px;
     margin: 0 auto;
     padding: 0 15px;
+    max-width: 1800px;
 }
 
 a {
-    color: inherit;   
+    color: inherit;
 }

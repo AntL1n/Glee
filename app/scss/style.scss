@@ -1,6 +1,7 @@
 @import "vars";
 @import "fonts";
 @import "reset";
+@import "libs";
 @import "global";
 
 .header {
@@ -237,6 +238,7 @@ footer a:hover {
     }
 
     &__link {
+        padding: 10px;
         font-size: 14px;
         color: $grey;
     }

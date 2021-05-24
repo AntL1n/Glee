@@ -1,4 +1,11 @@
+html,
 body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
     font-size: 16px;
     line-height: 26px;
     color: $port;
@@ -6,11 +13,8 @@ body {
     @extend %Rubik-400;
 }
 
-button {
-    outline: 1px solid transparent;
-    border: none;
-    line-height: 1;
-    cursor: pointer;
+.main {
+    flex-grow: 1;
 }
 
 .container {
@@ -21,4 +25,11 @@ button {
 
 a {
     color: inherit;
+}
+
+button {
+    outline: 1px solid transparent;
+    border: none;
+    line-height: 1;
+    cursor: pointer;
 }

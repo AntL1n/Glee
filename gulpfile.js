@@ -8,6 +8,7 @@ const uglify = require('gulp-uglify');
 const htmlmin = require('gulp-html-minifier-terser');
 const concat = require('gulp-concat');
 const del = require('del');
+const sprite = require('gulp-svg-sprite');
 
 const browsersync = () => {
     browserSync.init({
@@ -50,6 +51,20 @@ const scripts = () => {
         .pipe(browserSync.stream());
 };
 
+function svgSprite() {
+    return src('app/images/sprite/*.svg')
+        .pipe(
+            sprite({
+                mode: {
+                    stack: {
+                        sprite: '.../sprite.svg',
+                    },
+                },
+            }),
+        )
+        .pipe(dest('./dist/images'));
+}
+
 const cleanDist = () => {
     return del('dist');
 };
@@ -82,7 +97,7 @@ exports.browsersync = browsersync;
 exports.watching = watching;
 exports.build = build;
 exports.cleanDist = cleanDist;
+exports.svgSprite = svgSprite;
 exports.htmls = htmls;
-
 exports.build = series(cleanDist, htmls, build);
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.default = parallel(styles, scripts, browsersync, watching,svgSprite);

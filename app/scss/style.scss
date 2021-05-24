@@ -44,7 +44,7 @@
         border-radius: 50%;
 
         &:hover {
-            background-color: #80a1b3;
+            background-color: $bali;
         }
     }
 
@@ -53,7 +53,7 @@
         border: none;
 
         &:hover {
-            background-color: #80a1b3;
+            background-color: $bali;
         }
     }
 
@@ -62,7 +62,7 @@
         background-color: $apricot;
 
         &:hover {
-            background-color: #f3c194;
+            background-color: $manhattan;
         }
     }
 
@@ -78,7 +78,7 @@
             z-index: 1;
             width: 1px;
             height: 32px;
-            background-color: #fde7d3;
+            background-color: $oasis;
         }
     }
 
@@ -112,7 +112,7 @@
 }
 
 footer a:hover {
-    color: $casper;
+    color: $bali;
     transition: color 0.5s;
 }
 
@@ -146,12 +146,8 @@ footer a:hover {
 
     &__logo {
         display: block;
-        padding-bottom: 30px;
+        margin-bottom: 30px;
     }
-
-    // &__contact-item{
-    //     line-height: 24px;
-    // }
 
     &__contact-item:not(:last-child) {
         margin-bottom: 20px;
@@ -175,6 +171,74 @@ footer a:hover {
     &__link {
         font-size: 14px;
         line-height: 32px;
+    }
+
+    &__text {
+        margin-bottom: 35px;
+    }
+
+    &__form {
+        display: flex;
+    }
+
+    &__form-input {
+        padding: 12px 15px;
+        width: 100%;
+        max-width: 170px;
+        border: none;
+        background-color: $pink;
+
+        &::placeholder {
+            font-size: 12px;
+            color: $cello;
+
+            @extend %DMSans-400;
+        }
+    }
+
+    &__form-btn {
+        padding: 12px 18px;
+        border: none;
+        color: $white;
+        background-color: $casper;
+
+        &:hover {
+            background-color: $bali;
+        }
+
+        @extend %DMSans-400;
+    }
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+
+    &__copy {
+        font-size: 14px;
+        line-height: 32px;
+        color: $dusty;
+    }
+
+    &__nav {
+        display: flex;
+        line-height: 1;
+    }
+
+    &__item:not(:last-child) {
+        padding-right: 15px;
+    }
+
+    &__item:not(:first-child) {
+        padding-left: 15px;
+        border-left: 1px solid $boulder;
+    }
+
+    &__link {
+        font-size: 14px;
+        color: $grey;
     }
 }
 

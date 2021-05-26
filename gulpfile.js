@@ -45,7 +45,7 @@ const scripts = () => {
     return src([
         'node_modules/jquery/dist/jquery.js',
         'node_modules/slick-carousel/slick/slick.js',
-        'app/js/index.js', 
+        'app/js/index.js',
     ])
         .pipe(sourcemaps.init())
         .pipe(concat('index.min.js'))

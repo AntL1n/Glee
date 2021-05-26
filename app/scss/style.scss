@@ -58,6 +58,11 @@
         }
     }
 
+    &__icon-search {
+        width: 16px;
+        height: 16px;
+    }
+
     &__double-btn {
         position: relative;
         background-color: $apricot;
@@ -83,9 +88,19 @@
         }
     }
 
+    &__icon-heart {
+        width: 19px;
+        height: 17px;
+    }
+
     &__btn--cart {
         padding: 12px 41px 12px 30px;
         border-radius: 0 30px 30px 0;
+    }
+
+    &__icon-cart {
+        width: 19px;
+        height: 17px;
     }
 
     &__wrap {
@@ -109,6 +124,11 @@
     &__btn--catalog {
         margin-left: 20px;
         background-color: $casper;
+    }
+
+    &__icon-catalog {
+        width: 20px;
+        height: 20px;
     }
 }
 
@@ -305,6 +325,11 @@ footer a:hover {
         padding-right: 55px;
     }
 
+    &__icon-arrowright {
+        width: 22px;
+        height: 9px;
+    }
+
     &__img {
         z-index: 1;
     }
@@ -345,6 +370,62 @@ footer a:hover {
     }
 
     @extend %Rubik-500;
+}
+
+.info {
+    // padding: 40px 0;
+    background-color: $pink;
+
+    &__inner {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: center;
+        padding: 45px;
+        width: 100%;
+
+        &:not(:last-child) {
+            border-right: 1px solid $westar;
+        }
+    }
+
+    &__item {
+        padding-left: 80px;
+        max-width: 570px;
+        background-position: top left;
+        background-repeat: no-repeat;
+    }
+
+    &__item-title {
+        font-size: 18px;
+        line-height: 40px;
+        color: $tundora;
+
+        @extend %DMSans-700;
+    }
+
+    &__item-text {
+        max-width: 209px;
+        line-height: 30px;
+        color: $scorpion;
+
+        @extend %DMSans-400;
+    }
+
+    &__item--support {
+        background-image: url(../images/info/support.svg);
+    }
+
+    &__item--delivery {
+        background-image: url(../images/info/delivery.svg);
+    }
+
+    &__item--credit {
+        background-image: url(../images/info/credit.svg);
+    }
 }
 
 @import 'media';

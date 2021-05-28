@@ -37,3 +37,10 @@ button {
     line-height: 1;
     cursor: pointer;
 }
+
+.title {
+    font-size: 36px;
+    color: $codgray;
+
+    @extend %DMSans-700;
+}

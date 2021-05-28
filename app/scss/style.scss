@@ -373,7 +373,6 @@ footer a:hover {
 }
 
 .info {
-    // padding: 40px 0;
     background-color: $pink;
 
     &__inner {
@@ -425,6 +424,113 @@ footer a:hover {
 
     &__item--credit {
         background-image: url(../images/info/credit.svg);
+    }
+}
+
+.products {
+    padding: 65px 0 70px;
+
+    &__title {
+        margin-bottom: 35px;
+        text-align: center;
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 78px;
+
+        &-item:not(:last-child) {
+            margin-right: 25px;
+        }
+
+        &-btn {
+            padding: 0;
+            color: $grey;
+            background-color: transparent;
+
+            @extend %DMSans-700;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    &__items {
+        // margin: 0 15px 40px;
+        max-width: 270px;
+
+        // width: calc(100% / 4 - 30px);
+        // height: 380px;
+    }
+
+    &__item-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 27px 15px 35px;
+        height: 380px;
+
+        // width: 100%;
+        // height: 100%;
+        border-radius: 10px;
+        box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+        text-align: center;
+        background-color: $white;
+    }
+
+    &__item-img {
+        margin: auto;
+        object-fit: cover;
+    }
+
+    &__item-box {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 150px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__item-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        box-shadow: 0 6px 47px 3px rgb(37 37 37 / 5%);
+        fill: $casper;
+        background-color: $white;
+        transition: background-color 0.3s;
+
+        &:not(:last-child) {
+            margin-right: 18px;
+        }
+
+        &:hover {
+            fill: $white;
+            background-color: $casper;
+        }
+    }
+
+    &__icon-search {
+        width: 20px;
+        height: 20px;
+    }
+
+    &__icon-heart {
+        width: 20px;
+        height: 20px;
+    }
+
+    &__icon-cart {
+        width: 20px;
+        height: 20px;
     }
 }
 

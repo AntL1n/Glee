@@ -171,27 +171,37 @@
                 </div>
             </div>
             <section class="products">
-                <div class="container">
+                <div class="container products__container">
                     <h2 class="products__title title">Products of the week</h2>
                     <ul class="products__nav">
                         <li class="products__nav-item">
-                            <button class="products__nav-btn" href="#">All</button>
+                            <button class="products__nav-btn" data-filter="all" href="#">
+                                All
+                            </button>
                         </li>
                         <li class="products__nav-item">
-                            <button class="products__nav-btn" href="#">Furnitures</button>
+                            <button class="products__nav-btn" data-filter=".furnitures" href="#">
+                                Furnitures
+                            </button>
                         </li>
                         <li class="products__nav-item">
-                            <button class="products__nav-btn" href="#">Chairs</button>
+                            <button class="products__nav-btn" data-filter=".chairs" href="#">
+                                Chairs
+                            </button>
                         </li>
                         <li class="products__nav-item">
-                            <button class="products__nav-btn" href="#">Lighting</button>
+                            <button class="products__nav-btn" data-filter=".lighting" href="#">
+                                Lighting
+                            </button>
                         </li>
                         <li class="products__nav-item">
-                            <button class="products__nav-btn" href="#">Decor</button>
+                            <button class="products__nav-btn" data-filter=".decor" href="#">
+                                Decor
+                            </button>
                         </li>
                     </ul>
                     <ul class="products__content">
-                        <li class="products__items">
+                        <li class="products__items mix furnitures">
                             <article class="products__item-card">
                                 <img
                                     class="products__item-img"
@@ -221,7 +231,7 @@
                                 </span>
                             </article>
                         </li>
-                        <li class="products__items">
+                        <li class="products__items mix furnitures">
                             <article class="products__item-card">
                                 <img
                                     class="products__item-img"
@@ -251,7 +261,7 @@
                                 </span>
                             </article>
                         </li>
-                        <li class="products__items">
+                        <li class="products__items mix chairs">
                             <article class="products__item-card">
                                 <img
                                     class="products__item-img"
@@ -281,7 +291,7 @@
                                 </span>
                             </article>
                         </li>
-                        <li class="products__items">
+                        <li class="products__items mix chairs">
                             <article class="products__item-card">
                                 <img
                                     class="products__item-img"
@@ -311,7 +321,7 @@
                                 </span>
                             </article>
                         </li>
-                        <li class="products__items">
+                        <li class="products__items mix chairs">
                             <article class="products__item-card">
                                 <img
                                     class="products__item-img"
@@ -341,7 +351,7 @@
                                 </span>
                             </article>
                         </li>
-                        <li class="products__items">
+                        <li class="products__items mix lighting">
                             <article class="products__item-card">
                                 <img
                                     class="products__item-img"
@@ -371,7 +381,7 @@
                                 </span>
                             </article>
                         </li>
-                        <li class="products__items">
+                        <li class="products__items mix lighting">
                             <article class="products__item-card">
                                 <img
                                     class="products__item-img"
@@ -401,7 +411,7 @@
                                 </span>
                             </article>
                         </li>
-                        <li class="products__items">
+                        <li class="products__items mix decor">
                             <article class="products__item-card">
                                 <img
                                     class="products__item-img"
@@ -429,6 +439,153 @@
                                     <span>$</span>
                                     29.00
                                 </span>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+                <div class="notice">
+                    <div class="container container--long">
+                        <div class="notice__items">
+                            <div class="notice__item">
+                                <article class="notice__content">
+                                    <img
+                                        class="notice__content-img"
+                                        src="images/notice/1.png"
+                                        alt="notice image"
+                                    />
+                                    <h4 class="notice__content-title">Mirum Notare Tellus</h4>
+                                    <div class="notice__content-text">
+                                        <p>
+                                            LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight
+                                        </p>
+                                    </div>
+                                    <a class="notice__content-link" href="#">
+                                        <span class="notice__content-span">View More</span>
+                                        <svg class="notice__icon-arrowright">
+                                            <use xlink:href="images/sprite.svg#arrowright"></use>
+                                        </svg>
+                                    </a>
+                                </article>
+                            </div>
+                            <div class="notice__item">
+                                <article class="notice__content">
+                                    <img
+                                        class="notice__content-img"
+                                        src="images/notice/2.png"
+                                        alt="notice images"
+                                    />
+                                    <h4 class="notice__content-title">Malesuada Tempor Euismod</h4>
+                                    <div class="notice__content-text">
+                                        <p>
+                                            50W 8000lm Compact Size for HID
+                                            StreetLightReplacementLEDCornLight
+                                        </p>
+                                    </div>
+                                    <a class="notice__content-link" href="#">
+                                        <span class="notice__content-span">View More</span>
+                                        <svg class="notice__icon-arrowright">
+                                            <use xlink:href="images/sprite.svg#arrowright"></use>
+                                        </svg>
+                                    </a>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="design">
+                <div class="container design__container">
+                    <h2 class="design__title title">New Design</h2>
+                    <ul class="design__nav">
+                        <li class="design__nav-item">
+                            <button class="design__nav-btn" data-filter="all" href="#">All</button>
+                        </li>
+                        <li class="design__nav-item">
+                            <button class="design__nav-btn" data-filter=".furnitures" href="#">
+                                Furnitures
+                            </button>
+                        </li>
+                        <li class="design__nav-item">
+                            <button class="design__nav-btn" data-filter=".chairs" href="#">
+                                Chairs
+                            </button>
+                        </li>
+                        <li class="design__nav-item">
+                            <button class="design__nav-btn" data-filter=".lighting" href="#">
+                                Lighting
+                            </button>
+                        </li>
+                        <li class="design__nav-item">
+                            <button class="design__nav-btn" data-filter=".decor" href="#">
+                                Decor
+                            </button>
+                        </li>
+                    </ul>
+                    <ul class="design__items">
+                        <li class="design__item mix furnitures">
+                            <article class="design__content">
+                                <div class="design__content-img">
+                                    <img src="images/design/1.png" alt="design images" />
+                                </div>
+                                <a class="design__content-link" href="#">
+                                    <h3 class="design__content-title">Beat Flat Pendant Black</h3>
+                                </a>
+                                <span class="design__content-text">Classic</span>
+                            </article>
+                        </li>
+                        <li class="design__item mix furnitures">
+                            <article class="design__content">
+                                <div class="design__content-img">
+                                    <img src="images/design/2.png" alt="design images" />
+                                </div>
+                                <a class="design__content-link" href="#">
+                                    <h3 class="design__content-title">Lampe Sur Pieds Bamboo</h3>
+                                </a>
+                                <span class="design__content-text">Classic</span>
+                            </article>
+                        </li>
+                        <li class="design__item mix chairs">
+                            <article class="design__content">
+                                <div class="design__content-img design__content-img--extra">
+                                    <img src="images/design/3.png" alt="design images" />
+                                </div>
+                                <a class="design__content-link" href="#">
+                                    <h3 class="design__content-title">Rattan Rocking Chair</h3>
+                                </a>
+                                <span class="design__content-text">Classic</span>
+                            </article>
+                        </li>
+                        <li class="design__item mix lighting">
+                            <article class="design__content">
+                                <div class="design__content-img">
+                                    <img src="images/design/4.png" alt="design images" />
+                                </div>
+                                <a class="design__content-link" href="#">
+                                    <h3 class="design__content-title">Rattan Rocking Chair</h3>
+                                </a>
+                                <span class="design__content-text">Classic</span>
+                            </article>
+                        </li>
+                        <li class="design__item mix lighting">
+                            <article class="design__content">
+                                <div class="design__content-img design__content-img--extra">
+                                    <img src="images/design/5.png" alt="design images" />
+                                </div>
+                                <a class="design__content-link" href="#">
+                                    <h3 class="design__content-title">Lampe Sur Pieds Bamboo</h3>
+                                </a>
+                                <span class="design__content-text">Classic</span>
+                            </article>
+                        </li>
+                        <li class="design__item mix decor">
+                            <article class="design__content">
+                                <div class="design__content-img">
+                                    <img src="images/design/6.png" alt="design images" />
+                                </div>
+                                <a class="design__content-link" href="#">
+                                    <h3 class="design__content-title">Lampe Sur Pieds Bamboo</h3>
+                                </a>
+                                <span class="design__content-text">Classic</span>
                             </article>
                         </li>
                     </ul>

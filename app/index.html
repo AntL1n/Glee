@@ -171,7 +171,7 @@
                 </div>
             </div>
             <section class="products">
-                <div class="container products__container">
+                <div class="container">
                     <h2 class="products__title title">Products of the week</h2>
                     <ul class="products__nav">
                         <li class="products__nav-item">
@@ -494,7 +494,7 @@
                 </div>
             </section>
             <section class="design">
-                <div class="container design__container">
+                <div class="container">
                     <h2 class="design__title title">New Design</h2>
                     <ul class="design__nav">
                         <li class="design__nav-item">
@@ -595,92 +595,207 @@
                     data-fancybox
                     href="https://youtu.be/FnqEn-zu5GA"
                     style="background-image: url(../images/video-bg.jpg)"
-                    ><svg class="video-popup__icon-play">
-                        <use xlink:href="images/sprite.svg#play"></use>
-                    </svg>
+                    ><div class="video-popup__box">
+                        <svg class="video-popup__icon-play">
+                            <use xlink:href="images/sprite.svg#play"></use>
+                        </svg>
+                    </div>
                 </a>
             </section>
             <section class="articles">
                 <div class="container">
                     <div class="articles__top">
                         <div class="articles__top-title title">Our Insights & Articles</div>
-                        <a class="articles__top-link" href="#">View All</a>
+                        <a class="articles__top-link" href="#"
+                            >View All
+                            <svg class="articles__icon-next">
+                                <use xlink:href="images/sprite.svg#next"></use>
+                            </svg>
+                        </a>
                     </div>
                     <ul class="articles__items">
                         <li class="articles__item">
-                            <article class="articles__box">
-                                <div class="articles__item-img">
-                                    <img
-                                        class="articles__img"
-                                        src="images/articles/1.png"
-                                        alt="articles images"
-                                    />
-                                    <a class="articles__item-span" href="#">News</a>
-                                </div>
-                                <div class="articles__item-info">
-                                    <h4 class="articles__item-title">
-                                        <a class="articles__item-link" href="#">
-                                            Diusmod tempor incididunt ut labore et dolore magna
-                                            aliqua. Ut enim ad minim veniam
-                                        </a>
-                                    </h4>
-                                </div>
+                            <div class="articles__item-img">
+                                <img
+                                    class="articles__img"
+                                    src="images/articles/1.png"
+                                    alt="articles images"
+                                />
+                                <a class="articles__item-span" href="#">News</a>
+                            </div>
+                            <div class="articles__item-info">
+                                <h4 class="articles__item-title">
+                                    <a class="articles__item-link" href="#">
+                                        Diusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        Ut enim ad minim veniam
+                                    </a>
+                                </h4>
                                 <div class="articles__item-details">
-                                    <time class="articles__item-data">28 JANUARY, 2020</time>
-                                    <a class="articles__item-author" href="#">BY ADMIN</a>
+                                    <time class="articles__item-data articles__item-data--icon"
+                                        >28 JANUARY, 2020</time
+                                    >
+                                    <a
+                                        class="articles__item-author articles__item-data--author"
+                                        href="#"
+                                        >BY ADMIN</a
+                                    >
                                 </div>
-                            </article>
+                            </div>
                         </li>
                         <li class="articles__item">
-                            <article class="articles__box">
-                                <div class="articles__item-img">
-                                    <img
-                                        class="articles__img"
-                                        src="images/articles/2.png"
-                                        alt="articles images"
-                                    />
-                                    <a class="articles__item-span" href="#">News</a>
-                                </div>
-                                <div class="articles__item-info">
-                                    <h4 class="articles__item-title">
-                                        <a class="articles__item-link" href="#">
-                                            Aonsectetur adipisicing elit, sed do eiusmod tempor
-                                            incididunt ut labore et dolore
-                                        </a>
-                                    </h4>
-                                </div>
+                            <div class="articles__item-img">
+                                <img
+                                    class="articles__img"
+                                    src="images/articles/2.png"
+                                    alt="articles images"
+                                />
+                                <a class="articles__item-span" href="#">News</a>
+                            </div>
+                            <div class="articles__item-info">
+                                <h4 class="articles__item-title">
+                                    <a class="articles__item-link" href="#">
+                                        Aonsectetur adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore
+                                    </a>
+                                </h4>
                                 <div class="articles__item-details">
-                                    <time class="articles__item-data">28 JANUARY, 2020</time>
-                                    <a class="articles__item-author" href="#">BY ADMIN</a>
+                                    <time class="articles__item-data articles__item-data--icon"
+                                        >28 JANUARY, 2020</time
+                                    >
+                                    <a
+                                        class="articles__item-author articles__item-data--author"
+                                        href="#"
+                                        >BY ADMIN</a
+                                    >
                                 </div>
-                            </article>
+                            </div>
                         </li>
                         <li class="articles__item">
-                            <article class="articles__box">
-                                <div class="articles__item-img">
-                                    <img
-                                        class="articles__img"
-                                        src="images/articles/3.png"
-                                        alt="articles images"
-                                    />
-                                    <a class="articles__item-span" href="#">News</a>
-                                </div>
-                                <div class="articles__item-info">
-                                    <h4 class="articles__item-title">
-                                        <a class="articles__item-link" href="#">
-                                            Rncididunt ut labore et dolore magna aliqua. Ut enim
-                                        </a>
-                                    </h4>
-                                </div>
+                            <div class="articles__item-img">
+                                <img
+                                    class="articles__img"
+                                    src="images/articles/3.png"
+                                    alt="articles images"
+                                />
+                                <a class="articles__item-span" href="#">News</a>
+                            </div>
+                            <div class="articles__item-info">
+                                <h4 class="articles__item-title">
+                                    <a class="articles__item-link" href="#">
+                                        Rncididunt ut labore et dolore magna aliqua. Ut enim
+                                    </a>
+                                </h4>
                                 <div class="articles__item-details">
-                                    <time class="articles__item-data">28 JANUARY, 2020</time>
-                                    <a class="articles__item-author" href="#">BY ADMIN</a>
+                                    <time class="articles__item-data articles__item-data--icon"
+                                        >28 JANUARY, 2020</time
+                                    >
+                                    <a
+                                        class="articles__item-author articles__item-data--author"
+                                        href="#"
+                                        >BY ADMIN</a
+                                    >
                                 </div>
-                            </article>
+                            </div>
                         </li>
                     </ul>
                 </div>
             </section>
+            <div class="company">
+                <div class="container">
+                    <ul class="company__items">
+                        <li class="company__item">
+                            <div class="company__logo">
+                                <img
+                                    class="company__item-img"
+                                    src="images/company/logo1.png"
+                                    alt="company images"
+                                />
+                            </div>
+                        </li>
+                        <li class="company__item">
+                            <div class="company__logo">
+                                <img
+                                    class="company__item-img"
+                                    src="images/company/logo2.png"
+                                    alt="company images"
+                                />
+                            </div>
+                        </li>
+                        <li class="company__item">
+                            <div class="company__logo">
+                            <img
+                                class="company__item-img"
+                                src="images/company/logo3.png"
+                                alt="company images"
+                            />
+                            <div>
+                        </li>
+                        <li class="company__item">
+                            <div class="company__logo">
+                            <img
+                                class="company__item-img"
+                                src="images/company/logo4.png"
+                                alt="company images"
+                            />
+                            <div>
+                        </li>
+                        <li class="company__item">
+                            <div class="company__logo">
+                            <img
+                                class="company__item-img"
+                                src="images/company/logo5.png"
+                                alt="company images"
+                            />
+                        </div>
+                        </li>
+                        <li class="company__item">
+                            <div class="company__logo">
+                                <img
+                                    class="company__item-img"
+                                    src="images/company/logo1.png"
+                                    alt="company images"
+                                />
+                            </div>
+                        </li>
+                        <li class="company__item">
+                            <div class="company__logo">
+                                <img
+                                    class="company__item-img"
+                                    src="images/company/logo2.png"
+                                    alt="company images"
+                                />
+                            </div>
+                        </li>
+                        <li class="company__item">
+                            <div class="company__logo">
+                            <img
+                                class="company__item-img"
+                                src="images/company/logo3.png"
+                                alt="company images"
+                            />
+                            <div>
+                        </li>
+                        <li class="company__item">
+                            <div class="company__logo">
+                            <img
+                                class="company__item-img"
+                                src="images/company/logo4.png"
+                                alt="company images"
+                            />
+                            <div>
+                        </li>
+                        <li class="company__item">
+                            <div class="company__logo">
+                            <img
+                                class="company__item-img"
+                                src="images/company/logo5.png"
+                                alt="company images"
+                            />
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </main>
 
         <footer class="footer">

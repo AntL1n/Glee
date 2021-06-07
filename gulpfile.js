@@ -8,7 +8,7 @@ const uglify = require('gulp-uglify');
 const htmlmin = require('gulp-html-minifier-terser');
 const concat = require('gulp-concat');
 const del = require('del');
-// const sprite = require('gulp-svg-sprite');
+const svgSprite = require('gulp-svg-sprite');
 
 const browsersync = () => {
     browserSync.init({
@@ -23,6 +23,7 @@ const watching = () => {
     watch(['app/*.html']).on('change', browserSync.reload);
     watch(['app/scss/**/*.scss'], styles);
     watch(['app/js/index.js', '!app/js/index.min.js', '!app/js/index.min.js.map'], scripts);
+    watch('app/images/icons/**.svg', svgSprites);
 };
 
 const styles = () => {
@@ -57,19 +58,19 @@ const scripts = () => {
         .pipe(browserSync.stream());
 };
 
-// function svgSprite() {
-//     return src('app/images/sprite/*.svg')
-//         .pipe(
-//             sprite({
-//                 mode: {
-//                     stack: {
-//                         sprite: '.../sprite.svg',
-//                     },
-//                 },
-//             }),
-//         )
-//         .pipe(dest('./dist/images'));
-// }
+function svgSprites() {
+    return src('app/images/icons/**/*.svg')
+        .pipe(
+            svgSprite({
+                mode: {
+                    stack: {
+                        sprite: '../sprite.svg',
+                    },
+                },
+            }),
+        )
+        .pipe(dest('app/images'));
+}
 
 const cleanDist = () => {
     return del('dist');
@@ -103,7 +104,7 @@ exports.browsersync = browsersync;
 exports.watching = watching;
 exports.build = build;
 exports.cleanDist = cleanDist;
-// exports.svgSprite = svgSprite;
+exports.svgSprites = svgSprites;
 exports.htmls = htmls;
 exports.build = series(cleanDist, htmls, build);
-exports.default = parallel(styles, scripts, browsersync, watching); //svgSprite);
+exports.default = parallel(styles, scripts, browsersync, svgSprites, watching);

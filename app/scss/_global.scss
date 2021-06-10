@@ -44,3 +44,34 @@ button {
 
     @extend %DMSans-700;
 }
+
+.breadcrumbs {
+    display: inline-flex;
+    justify-content: center;
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        position: relative;
+        font-size: 14px;
+        line-height: 24px;
+        color: $manatee;
+
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+
+        &:not(:last-child)::after {
+            content: '/';
+            position: absolute;
+            right: -13px;
+            top: 0;
+        }
+
+        &:last-child {
+            color: $port;
+        }
+    }
+}

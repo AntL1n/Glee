@@ -1,8 +1,8 @@
-@import "vars";
-@import "fonts";
-@import "reset";
-@import "libs";
-@import "global";
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
 
 .header {
     padding: 50px 0 43px;
@@ -77,7 +77,7 @@
         border-radius: 30px 0 0 30px;
 
         &::after {
-            content: "";
+            content: '';
             position: absolute;
             right: 0;
             top: 9px;
@@ -260,6 +260,21 @@ footer a:hover {
     }
 }
 
+.top {
+    padding: 34px 0;
+    text-align: center;
+    background-color: $mystic;
+
+    &__title {
+        margin-bottom: 8px;
+        font-size: 36px;
+        line-height: 24px;
+        color: $clay;
+
+        @extend %Rubik-300;
+    }
+}
+
 .top-slider {
     &__inner {
         background-color: $apricot;
@@ -280,7 +295,7 @@ footer a:hover {
         max-width: 1200px;
 
         &::before {
-            content: "";
+            content: '';
             position: absolute;
             right: -100px;
             top: 50%;
@@ -855,11 +870,11 @@ footer a:hover {
     }
 
     &__item-data--icon::before {
-        background-image: url("../images/articles/1.svg");
+        background-image: url('../images/articles/1.svg');
     }
 
     &__item-data--author::before {
-        background-image: url("../images/articles/2.svg");
+        background-image: url('../images/articles/2.svg');
     }
 
     &__item-data--author:hover {
@@ -876,7 +891,7 @@ footer a:hover {
         padding-left: 20px;
 
         &::before {
-            content: "";
+            content: '';
             position: absolute;
             left: 0;
             top: 7px;
@@ -907,4 +922,9 @@ footer a:hover {
     }
 }
 
-@import "media";
+.modal {
+    margin: 0 auto 120px;
+    max-width: 475px;
+}
+
+@import 'media';

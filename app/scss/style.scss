@@ -2,6 +2,7 @@
 @import 'fonts';
 @import 'reset';
 @import 'libs';
+@import 'mixins';
 @import 'global';
 
 .header {
@@ -9,18 +10,106 @@
 
     &__inner {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
     }
 }
 
 .menu {
+    z-index: 1;
+
+    &__btn {
+        display: none;
+
+        @include r($xl) {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            width: 50px;
+            height: 30px;
+            border: none;
+            background-color: transparent;
+
+            &::after,
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 3px;
+                background-color: $blue;
+            }
+
+            &::before {
+                top: 0;
+            }
+
+            &::after {
+                bottom: 0;
+            }
+
+            span {
+                width: 100%;
+                height: 3px;
+                background-color: $blue;
+            }
+        }
+    }
+
+    &__btn--active {
+        &::before,
+        &::after {
+            background-color: $white;
+        }
+
+        span {
+            background-color: $white;
+        }
+    }
+
     &__list {
         display: flex;
+
+        @include r($xl) {
+            position: absolute;
+            left: 0;
+            top: 0;
+            flex-direction: column;
+            align-items: center;
+            padding: 80px 0 15px;
+            width: 100%;
+            background-color: rgba(36, 63, 77, 0.9);
+            transform: translateY(-200%);
+            transition: all 0.3s;
+
+            &.menu__list--active {
+                transform: translateY(0);
+                transition: all 0.3s;
+
+                span {
+                    background-color: $white;
+                }
+            }
+        }
+    }
+
+    &__list-item {
+        @include r($xl) {
+            padding-left: 0;
+            width: 100%;
+            text-align: center;
+        }
     }
 
     &__list-item + .menu__list-item {
         padding-left: 30px;
+
+        @include r($xl) {
+            padding-left: 0;
+        }
     }
 
     &__list-link {
@@ -32,7 +121,21 @@
             border-bottom: 1px solid $blue;
         }
 
+        @include r($xl) {
+            display: block;
+            padding: 12px 0;
+            color: $white;
+        }
+
         @extend %Rubik-500;
+    }
+
+    @include r($xl) {
+        order: 1;
+    }
+
+    @include r($md) {
+        order: 0;
     }
 }
 
@@ -81,7 +184,7 @@
             position: absolute;
             right: 0;
             top: 9px;
-            z-index: 1;
+            z-index: 0;
             width: 1px;
             height: 32px;
             background-color: $oasis;
@@ -127,6 +230,22 @@
         width: 19px;
         height: 17px;
     }
+
+    @include r($md) {
+        justify-content: center;
+        margin-top: 35px;
+        width: 100%;
+    }
+}
+
+.footer {
+    @include r($md) {
+        padding: 50px 0 15px;
+    }
+
+    @include r($sm) {
+        text-align: center;
+    }
 }
 
 footer a:hover {
@@ -136,6 +255,7 @@ footer a:hover {
 
 .footer-top {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 75px 0;
     border-bottom: 1px solid $mystic;
@@ -162,9 +282,24 @@ footer a:hover {
         max-width: 270px;
     }
 
+    &__item {
+        @include r($lg) {
+            margin-bottom: 15px;
+            max-width: 50%;
+        }
+
+        @include r($sm) {
+            max-width: 100%;
+        }
+    }
+
     &__logo {
         display: block;
         margin-bottom: 30px;
+
+        @include r($sm) {
+            display: inline-block;
+        }
     }
 
     &__contact-item:not(:last-child) {
@@ -197,6 +332,10 @@ footer a:hover {
 
     &__form {
         display: flex;
+
+        @include r($sm) {
+            justify-content: center;
+        }
     }
 
     &__form-input {
@@ -238,6 +377,10 @@ footer a:hover {
         font-size: 14px;
         line-height: 32px;
         color: $dusty;
+
+        @include r($md) {
+            margin-bottom: 10px;
+        }
     }
 
     &__nav {
@@ -257,6 +400,12 @@ footer a:hover {
     &__link {
         font-size: 14px;
         color: $grey;
+    }
+
+    @include r($md) {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
     }
 }
 
@@ -926,5 +1075,3 @@ footer a:hover {
     margin: 0 auto 120px;
     max-width: 475px;
 }
-
-@import 'media';

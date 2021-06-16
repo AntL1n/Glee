@@ -1,3 +1,12 @@
+// screen size
+$xsm: 380px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+// color
 $blue: #436372;
 $dianne: #243f4d;
 $boulder: #7b7b7b;
@@ -29,6 +38,8 @@ $mercury: #e6e6e6;
 $clay: #222933;
 $shaft: #262626;
 $manatee: #979ba0;
+
+//font
 %DMSans-400 {
     font-family: 'DMSans-Regular', sans-serif;
     font-weight: 400;

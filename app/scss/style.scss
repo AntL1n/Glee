@@ -14,6 +14,10 @@
         align-items: center;
         justify-content: space-between;
     }
+
+    @include r($xxl) {
+        padding: 30px 0;
+    }
 }
 
 .menu {
@@ -431,6 +435,10 @@ footer a:hover {
 
     &__items {
         padding: 220px 0 280px;
+
+        @include r($xl) {
+            padding: 20px 0 30px;
+        }
     }
 
     &__item {
@@ -453,6 +461,23 @@ footer a:hover {
             border-radius: 50%;
             background-image: linear-gradient(to left, #fff 0%, rgba(255, 255, 255, 0) 100%);
             transform: translateY(-48%);
+
+            @include r($xxl) {
+                display: none;
+            }
+        }
+
+        @include r($xl) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__content {
+        @include r($xl) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
     }
 
@@ -464,6 +489,16 @@ footer a:hover {
         text-transform: uppercase;
         color: $dianne;
 
+        @include r($xl) {
+            margin-bottom: 15px;
+            max-width: none;
+            font-size: 48px;
+        }
+
+        @include r($md) {
+            font-size: 30px;
+        }
+
         @extend %Rubik-500;
     }
 
@@ -473,6 +508,15 @@ footer a:hover {
         font-size: 18px;
         line-height: 30px;
         color: $blue;
+
+        @include r($xl) {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        @include r($md) {
+            font-size: 15px;
+        }
     }
 
     &__link {
@@ -483,6 +527,10 @@ footer a:hover {
 
         &:hover {
             background-color: $dianne;
+        }
+
+        @include r($xl) {
+            margin-bottom: 30px;
         }
 
         @extend %Rubik-500;
@@ -500,6 +548,12 @@ footer a:hover {
 
     &__img {
         z-index: 1;
+
+        @include r($xl) {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
     }
 
     .slick-dots {
@@ -547,6 +601,10 @@ footer a:hover {
         display: flex;
         justify-content: space-around;
         background-color: $pink;
+
+        @include r($xl) {
+            flex-wrap: wrap;
+        }
     }
 
     &__items {
@@ -557,6 +615,18 @@ footer a:hover {
 
         &:not(:last-child) {
             border-right: 1px solid $westar;
+
+            @include r($xl) {
+                padding: 20px;
+                border-right: none;
+                border-bottom: 1px solid $westar;
+            }
+        }
+
+        @include r($xl) {
+            &:last-child {
+                padding: 15px;
+            }
         }
     }
 
@@ -565,12 +635,21 @@ footer a:hover {
         max-width: 570px;
         background-position: top left;
         background-repeat: no-repeat;
+
+        @include r($xl) {
+            padding-left: 70px;
+            max-width: 246px;
+        }
     }
 
     &__item-title {
         font-size: 18px;
         line-height: 40px;
         color: $tundora;
+
+        @include r($md) {
+            font-size: 15px;
+        }
 
         @extend %DMSans-700;
     }
@@ -579,6 +658,10 @@ footer a:hover {
         max-width: 209px;
         line-height: 30px;
         color: $scorpion;
+
+        @include r($md) {
+            line-height: 26px;
+        }
 
         @extend %DMSans-400;
     }
@@ -594,6 +677,10 @@ footer a:hover {
     &__item--credit {
         background-image: url(../images/info/credit.svg);
     }
+
+    @include r($xl) {
+        margin-bottom: 40px;
+    }
 }
 
 .products {
@@ -602,6 +689,15 @@ footer a:hover {
     &__title {
         margin-bottom: 35px;
         text-align: center;
+
+        @include r($xl) {
+            margin-bottom: 20px;
+            font-size: 40px;
+        }
+
+        @include r($sm) {
+            font-size: 30px;
+        }
     }
 
     &__nav {
@@ -611,6 +707,10 @@ footer a:hover {
 
         &-item:not(:last-child) {
             margin-right: 25px;
+
+            @include r($xl) {
+                margin-right: 15px;
+            }
         }
 
         &-btn {
@@ -624,18 +724,32 @@ footer a:hover {
 
             @extend %DMSans-700;
         }
+
+        @include r($xl) {
+            margin-bottom: 40px;
+        }
     }
 
     &__content {
         display: flex;
         flex-wrap: wrap;
         margin: 0 -15px 186px;
+
+        @include r($xxl) {
+            justify-content: center;
+            margin-bottom: 30px;
+        }
     }
 
     &__items {
         margin: 0 15px 40px;
         width: 100%;
         max-width: 270px;
+
+        @include r($md) {
+            justify-content: center;
+            margin: 0 15px 20px;
+        }
     }
 
     &__item-card {
@@ -716,13 +830,18 @@ footer a:hover {
     &__icon-cart {
         width: 20px;
         height: 20px;
-        fill: #fff;
+
+        // fill: #fff;
     }
 }
 
 .notice {
     &__items {
         display: flex;
+
+        @include r($xl) {
+            flex-wrap: wrap;
+        }
     }
 
     &__item {
@@ -732,6 +851,18 @@ footer a:hover {
 
         &:not(:last-child) {
             margin-right: 30px;
+
+            @include r($xl) {
+                margin: 0 0 20px;
+            }
+        }
+
+        @include r($xxl) {
+            padding: 50px;
+        }
+
+        @include r($sm) {
+            padding-left: 15px;
         }
     }
 
@@ -746,6 +877,15 @@ footer a:hover {
             height: 405px;
             max-width: 235px;
             object-fit: cover;
+
+            @include r($xxl) {
+                height: auto;
+                max-width: 120px;
+            }
+
+            @include r($sm) {
+                position: static;
+            }
         }
 
         &-title {
@@ -754,6 +894,10 @@ footer a:hover {
             line-height: 32px;
             color: $dianne;
 
+            @include r($md) {
+                font-size: 18px;
+            }
+
             @extend %DMSans-700;
         }
 
@@ -761,6 +905,11 @@ footer a:hover {
             margin-bottom: 30px;
             line-height: 30px;
             color: $dianne;
+
+            @include r($md) {
+                max-width: 360px;
+                line-height: 22px;
+            }
         }
 
         &-link {
@@ -791,6 +940,14 @@ footer a:hover {
             color: $blue;
 
             @extend %Rubik-500;
+        }
+
+        @include r($xxl) {
+            padding-left: 145px;
+        }
+
+        @include r($sm) {
+            padding-left: 0;
         }
     }
 

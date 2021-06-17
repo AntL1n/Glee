@@ -1,9 +1,9 @@
-@import 'vars';
-@import 'fonts';
-@import 'reset';
-@import 'libs';
-@import 'mixins';
-@import 'global';
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "libs";
+@import "mixins";
+@import "global";
 
 .header {
     padding: 50px 0 43px;
@@ -40,7 +40,7 @@
 
             &::after,
             &::before {
-                content: '';
+                content: "";
                 position: absolute;
                 width: 100%;
                 height: 3px;
@@ -184,7 +184,7 @@
         border-radius: 30px 0 0 30px;
 
         &::after {
-            content: '';
+            content: "";
             position: absolute;
             right: 0;
             top: 9px;
@@ -369,6 +369,10 @@ footer a:hover {
 
         @extend %DMSans-400;
     }
+
+    @include r($xl) {
+        padding: 50px 0 0;
+    }
 }
 
 .footer-bottom {
@@ -452,7 +456,7 @@ footer a:hover {
         max-width: 1200px;
 
         &::before {
-            content: '';
+            content: "";
             position: absolute;
             right: -100px;
             top: 50%;
@@ -769,6 +773,11 @@ footer a:hover {
                 transform: translateY(0);
             }
         }
+
+        @include r($md) {
+            padding: 6px 15px 35px;
+            height: 330px;
+        }
     }
 
     &__item-img {
@@ -832,6 +841,10 @@ footer a:hover {
         height: 20px;
 
         // fill: #fff;
+    }
+
+    @include r($xl) {
+        margin-bottom: 50px;
     }
 }
 
@@ -962,6 +975,15 @@ footer a:hover {
     &__title {
         margin-bottom: 35px;
         text-align: center;
+
+        @include r($xl) {
+            margin-bottom: 20px;
+            font-size: 40px;
+        }
+
+        @include r($sm) {
+            font-size: 30px;
+        }
     }
 
     &__nav {
@@ -971,6 +993,10 @@ footer a:hover {
 
         &-item:not(:last-child) {
             margin-right: 25px;
+
+            @include r($sm) {
+                margin-right: 15px;
+            }
         }
 
         &-btn {
@@ -984,12 +1010,21 @@ footer a:hover {
 
             @extend %DMSans-700;
         }
+
+        @include r($xl) {
+            margin-bottom: 50px;
+        }
     }
 
     &__items {
         display: flex;
         flex-wrap: wrap;
         margin: 0 -15px 110px;
+
+        @include r($xxl) {
+            justify-content: center;
+            margin-bottom: 30px;
+        }
     }
 
     &__item {
@@ -998,12 +1033,25 @@ footer a:hover {
         height: 245px;
         max-width: 370px;
         background-color: $alabaster;
+
+        @include r($xl) {
+            margin-bottom: 20px;
+        }
+
+        // @include r($lg) {
+        //     width: 100%;
+        //     max-width: none;
+        // }
     }
 
     &__content {
         position: relative;
         padding: 35px 0 0 35px;
         height: 100%;
+
+        @include r($lg) {
+            padding: 20px 0 0 5px;
+        }
     }
 
     &__content-img {
@@ -1074,6 +1122,14 @@ footer a:hover {
         height: 25px;
         fill: $white;
     }
+
+    @include r($xl) {
+        height: 40vh;
+    }
+
+    @include r($md) {
+        margin-bottom: 50px;
+    }
 }
 
 .articles {
@@ -1081,6 +1137,21 @@ footer a:hover {
         display: flex;
         justify-content: space-between;
         margin-bottom: 46px;
+
+        @include r($sm) {
+            flex-wrap: wrap;
+            margin-bottom: 26px;
+        }
+    }
+
+    &__top-title {
+        @include r($md) {
+            font-size: 30px;
+        }
+
+        @include r($sm) {
+            font-size: 25px;
+        }
     }
 
     &__top-link {
@@ -1102,6 +1173,15 @@ footer a:hover {
 
     &__items {
         display: flex;
+
+        @include r($lg) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @include r($md) {
+            flex-direction: column;
+        }
     }
 
     &__item {
@@ -1115,6 +1195,15 @@ footer a:hover {
         &:not(:last-child) {
             margin-right: 30px;
         }
+
+        @include r($lg) {
+            margin-bottom: 30px;
+            width: 45%;
+        }
+
+        @include r($md) {
+            width: 100%;
+        }
     }
 
     &__item-img {
@@ -1125,6 +1214,7 @@ footer a:hover {
     &__img {
         width: 100%;
         height: 250px;
+        object-fit: cover;
     }
 
     &__item-span {
@@ -1176,11 +1266,11 @@ footer a:hover {
     }
 
     &__item-data--icon::before {
-        background-image: url('../images/articles/1.svg');
+        background-image: url("../images/articles/1.svg");
     }
 
     &__item-data--author::before {
-        background-image: url('../images/articles/2.svg');
+        background-image: url("../images/articles/2.svg");
     }
 
     &__item-data--author:hover {
@@ -1197,7 +1287,7 @@ footer a:hover {
         padding-left: 20px;
 
         &::before {
-            content: '';
+            content: "";
             position: absolute;
             left: 0;
             top: 7px;
@@ -1225,6 +1315,11 @@ footer a:hover {
 
     &__item-img {
         margin: auto;
+    }
+
+    @include r($lg  ) {
+        margin-top: 0;
+        padding: 70px 0 60px;
     }
 }
 

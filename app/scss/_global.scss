@@ -64,7 +64,7 @@ button {
         }
 
         &:not(:last-child)::after {
-            content: '/';
+            content: "/";
             position: absolute;
             right: -13px;
             top: 0;

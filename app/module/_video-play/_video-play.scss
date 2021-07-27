@@ -1,0 +1,47 @@
+.video-play {
+    margin-bottom: 110px;
+    height: 500px;
+    background-image: url(../images/top-slider.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__popup {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 500px;
+    }
+}
+
+@media (max-width: 870px) {
+    .video-play {
+        margin-bottom: 60px;
+        height: 400px;
+
+        &__popup {
+            height: 400px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .video-play {
+        height: 300px;
+
+        &__popup {
+            height: 300px;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .video-play {
+        height: 200px;
+
+        &__popup {
+            height: 200px;
+        }
+    }
+}

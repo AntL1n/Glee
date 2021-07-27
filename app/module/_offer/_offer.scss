@@ -1,0 +1,138 @@
+.offer {
+    &__items {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        display: flex;
+        width: 100%;
+        max-width: 870px;
+        color: $accent;
+        background-color: #feefe2;
+
+        &-info {
+            margin: 90px auto 95px 0;
+            padding-right: 15px;
+            width: 100%;
+            max-width: 355px;
+        }
+
+        &-img {
+            margin-top: -180px;
+            margin-right: 35px;
+            margin-left: auto;
+            object-fit: contain;
+        }
+
+        &-title {
+            padding-bottom: 20px;
+            font-size: 26px;
+            line-height: 36px;
+
+            @extend %dmsans-700;
+        }
+
+        &-text {
+            padding-bottom: 30px;
+        }
+
+        &-btn {
+            position: relative;
+            padding: 20px 85px 20px 20px;
+            border: 1px solid #b3b7b5;
+            border-radius: 5px;
+            color: $accent-light;
+            background-color: transparent;
+            cursor: pointer;
+
+            @extend %rubik-500;
+        }
+
+        svg {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__item + .offer__item {
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .offer {
+        &__items {
+            display: block;
+        }
+
+        &__item + .offer__item {
+            margin: 120px auto 0;
+        }
+
+        &__item {
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .offer {
+        &__item + .offer__item {
+            margin: 70px auto 0;
+        }
+
+        &__item-info {
+            margin: 70px auto 70px 0;
+        }
+
+        &__item-img {
+            width: 30%;
+            transform: translateY(15%);
+        }
+
+        &__item-title {
+            padding-bottom: 10px;
+            font-size: 22px;
+        }
+
+        &__item-text {
+            padding-bottom: 15px;
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        &__item-btn {
+            height: 70px;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .offer {
+        &__item + .offer__item {
+            margin: 40px auto 0;
+        }
+
+        &__item-info {
+            margin: 15px auto 15px 0;
+        }
+
+        &__item-img {
+            width: 30%;
+            transform: translateY(15%);
+        }
+
+        &__item-btn {
+            padding: 10px 50px 10px 10px;
+            height: unset;
+            font-size: 14px;
+        }
+
+        &__title {
+            line-height: 26px;
+        }
+    }
+}

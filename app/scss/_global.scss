@@ -7,10 +7,10 @@ body {
     display: flex;
     flex-direction: column;
     font-size: 16px;
-    line-height: 26px;
-    color: $port;
+    line-height: 30px;
+    color: $default;
 
-    @extend %Rubik-400;
+    @extend %rubik-400;
 }
 
 .main {
@@ -21,28 +21,32 @@ body {
     margin: 0 auto;
     padding: 0 15px;
     max-width: 1200px;
+}
 
-    &--long {
-        max-width: 1800px;
-    }
+.container-lg {
+    max-width: 1800px;
 }
 
 a {
-    color: inherit;
-}
+    font-size: 14px;
+    line-height: 20px;
+    color: $default;
 
-button {
-    outline: 1px solid transparent;
-    border: none;
-    line-height: 1;
-    cursor: pointer;
+    @extend %rubik-400;
 }
 
 .title {
+    margin-top: 70px;
     font-size: 36px;
-    color: $codgray;
+    text-align: center;
+    color: #191919;
+    color: $accent;
 
-    @extend %DMSans-700;
+    @extend %dmsans-700;
+}
+
+button.mixitup-control-active {
+    color: #191919;
 }
 
 .breadcrumbs {
@@ -55,23 +59,60 @@ button {
 
     &__item {
         position: relative;
-        font-size: 14px;
-        line-height: 24px;
-        color: $manatee;
+        padding-right: 15px;
 
-        &:not(:last-child) {
-            margin-right: 20px;
-        }
-
-        &:not(:last-child)::after {
+        &::after {
             content: "/";
             position: absolute;
-            right: -13px;
-            top: 0;
+            right: 4px;
+            top: 1px;
+            font-size: 14px;
         }
 
         &:last-child {
-            color: $port;
+            padding-right: 0;
+            color: $accent;
+
+            &::after {
+                display: none;
+            }
         }
+    }
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 65px;
+
+    .pagination__list {
+        display: flex;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        width: 50px;
+        height: 50px;
+        border: 1px solid $btn;
+        line-height: 0;
+        color: $accent;
+
+        &.pagination__link--active {
+            color: #fff;
+            background-color: $btn;
+        }
+    }
+
+    &__next {
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        height: 50px;
+        border: 1px solid $btn;
+        color: $accent;
     }
 }

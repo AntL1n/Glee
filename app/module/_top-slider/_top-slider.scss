@@ -1,0 +1,149 @@
+.top-slider {
+    &__inner {
+        padding: 215px 0 45px;
+        background-image: url(../images/decor/top-slider-bg.png);
+        background-position: right 185px center;
+        background-repeat: no-repeat;
+        background-color: $bg;
+    }
+
+    &__item {
+        display: flex !important;
+        justify-content: space-between;
+    }
+
+    &__content {
+        margin-bottom: 20px;
+        max-width: 470px;
+    }
+
+    &__title {
+        padding-bottom: 23px;
+        font-size: 72px;
+        line-height: 70px;
+        color: $accent;
+
+        @extend %rubik-500;
+    }
+
+    &__text {
+        padding-bottom: 40px;
+        font-size: 18px;
+        color: $accent-light;
+    }
+
+    &__link {
+        position: relative;
+        padding: 16px 100px 16px 25px;
+        font-size: 15px;
+        line-height: 12px;
+        color: #fff;
+        background-color: $btn;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            width: 22px;
+            height: 9px;
+            background-image: url(../images/icons/arrow.png);
+            transform: translateY(-50%);
+        }
+    }
+
+    &__img {
+        margin-top: auto;
+        max-height: 264px;
+    }
+}
+
+ul.slick-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 190px;
+
+    li {
+        padding: 0 5px;
+
+        button {
+            opacity: 30%;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            border: none;
+            border-radius: 50%;
+            font-size: 10.88px;
+            line-height: 8.7px;
+            color: $accent;
+            background-color: #fff;
+
+            @extend %rubik-500;
+        }
+
+        &.slick-active {
+            button {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media (max-width: 1650px) {
+    .top-slider {
+        &__inner {
+            background-position: right 100px center;
+        }
+    }
+}
+
+@media (max-width: 1450px) {
+    .top-slider {
+        &__inner {
+            background-position: right 10px center;
+        }
+
+        &__img {
+            width: 50%;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .slick-slide img {
+        display: none;
+    }
+
+    ul.slick-dots {
+        margin-top: 70px;
+    }
+
+    .top-slider {
+        &__inner {
+            padding-top: 100px;
+            background-size: contain;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .top-slider {
+        &__inner {
+            background-image: none;
+        }
+
+        &__title {
+            font-size: 52px;
+            line-height: 62px;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .top-slider {
+        &__title {
+            font-size: 34px;
+            line-height: 42px;
+        }
+    }
+}

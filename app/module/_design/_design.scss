@@ -1,0 +1,87 @@
+.design {
+    margin-bottom: 120px;
+
+    &__filter-btn {
+        margin: 20px 0 80px;
+        text-align: center;
+    }
+
+    &__btn {
+        border: none;
+        color: $default;
+        background-color: transparent;
+
+        @extend %dmsans-700;
+    }
+
+    &__items {
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    &__item {
+        position: relative;
+        padding: 35px 0 30px 40px;
+        height: 245px;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+
+        &-title {
+            position: absolute;
+            left: 35px;
+            top: 40px;
+            width: 180px;
+            font-size: 20px;
+            line-height: 22px;
+            color: #191919;
+
+            @extend %dmsans-700;
+        }
+
+        &-price {
+            position: absolute;
+            left: 35px;
+            top: 95px;
+            font-size: 16px;
+            color: $btn;
+
+            @extend %dmsans-700;
+        }
+    }
+}
+
+@media (max-width: 870px) {
+    .design {
+        &__items {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &__item {
+            height: unset;
+        }
+
+        &__filter-btn {
+            margin-bottom: 45px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .design {
+        margin-bottom: 60px;
+
+        &__items {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        &__item {
+            height: unset;
+        }
+
+        &__filter-btn {
+            margin-bottom: 45px;
+        }
+    }
+}

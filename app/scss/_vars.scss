@@ -1,88 +1,62 @@
-// screen size
-$xsm: 380px;
-$sm: 576px;
-$md: 768px;
-$lg: 992px;
-$xl: 1200px;
-$xxl: 1400px;
+$default: #7b7b7b;
+$accent-light: #436372;
+$accent: #243f4d;
+$bg: #fcd7b6;
+$bg-form: #fef7f0;
+$btn: #a3bbc8;
 
-// color
-$blue: #436372;
-$dianne: #243f4d;
-$boulder: #7b7b7b;
-$port: #1f2044;
-$cello: #234969;
-$white: #fff;
-$apricot: #fcd7b6;
-$bali: #80a1b3;
-$casper: #a3bbc8;
-$mystic: #dae4e9;
-$alto: #d0d0d0;
-$wine: #4c4d69;
-$pink: #fef7f0;
-$manhattan: #f3c194;
-$oasis: #fde7d3;
-$dusty: #959595;
-$grey: #909090;
-$sky: #667983;
-$lace: #fdefe2;
-$tundora: #414141;
-$scorpion: #585858;
-$westar: #e8e4df;
-$codgray: #191919;
-$bluewood: #2a4350;
-$spanish: #feefe2;
-$edward: #b3b7b5;
-$alabaster: #f8f8f8;
-$mercury: #e6e6e6;
-$clay: #222933;
-$shaft: #262626;
-$manatee: #979ba0;
-$sand: #f6f6f6;
-$gallery: #ebebeb;
-$bayoux: #436372;
-$comet: #565872;
-
-//font
-%DMSans-400 {
-    font-family: 'DMSans-Regular', sans-serif;
+%dmsans-400 {
+    font-family: "DMSans-Regular", sans-serif;
     font-weight: 400;
 }
 
-%DMSans-500 {
-    font-family: 'DMSans-Medium', sans-serif;
+%dmsans-700 {
+    font-family: "DMSans-Bold", sans-serif;
+    font-weight: 700;
+}
+
+%dmsans-500 {
+    font-family: "DMSans-Medium", sans-serif;
     font-weight: 500;
 }
 
-%DMSans-700 {
-    font-family: 'DMSans-Bold', sans-serif;
+%poppins-700 {
+    font-family: "Poppins-Bold", sans-serif;
     font-weight: 700;
 }
 
-%Poppins-700 {
-    font-family: 'Poppins-Bold', sans-serif;
-    font-weight: 700;
-}
-%Poppins-600 {
-    font-family: 'Poppins-SemiBold', sans-serif;
-    font-weight: 700;
+%rubik-500 {
+    font-family: "Rubik-Medium", sans-serif;
+    font-weight: 500;
 }
 
-%Rubik-300 {
-    font-family: 'Rubik-Light', sans-serif;
+%rubik-400 {
+    font-family: "Rubik-Regular", sans-serif;
+    font-weight: 400;
+}
+
+%rubik-300 {
+    font-family: "Rubik-Light", sans-serif;
     font-weight: 300;
 }
 
-%Rubik-400 {
-    font-family: 'Rubik-Regular', sans-serif;
-    font-weight: 400;
+%rubik-700 {
+    font-family: "Rubik-Bold", sans-serif;
+    font-weight: 700;
 }
 
-%Rubik-500 {
-    font-family: 'Rubik-Medium', sans-serif;
-    font-weight: 500;
+%checkbox-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
 }
-%Rubik-700 {
-    font-family: 'Rubik-Bold', sans-serif;
-    font-weight: 700;
+
+@function max($numbers...) {
+    @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+    @return m#{i}n(#{$numbers});
 }

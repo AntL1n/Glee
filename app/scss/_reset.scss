@@ -8,8 +8,8 @@ html {
     box-sizing: inherit;
 }
 
-ul,
-ol {
+ul[class],
+ol[class] {
     padding: 0;
 }
 
@@ -21,8 +21,8 @@ h4,
 h5,
 h6,
 p,
-ul,
-ol,
+ul[class],
+ol[class],
 li,
 figure,
 figcaption,
@@ -32,7 +32,7 @@ dd {
     margin: 0;
 }
 
-ul {
+ul[class] {
     list-style: none;
 }
 

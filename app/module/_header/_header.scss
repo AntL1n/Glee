@@ -1,0 +1,238 @@
+.header {
+    padding: 50px 0 55px;
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+
+    &__btn {
+        display: none;
+    }
+
+    &__list {
+        position: absolute;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__list-item + .menu__list-item {
+        padding-left: 35px;
+    }
+
+    &__list-link {
+        font-size: 15px;
+        color: $accent-light;
+
+        &:hover {
+            padding-bottom: 2px;
+            border-bottom: 1px solid $accent-light;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        @extend %rubik-500;
+    }
+
+    &__list-link--active {
+        padding-bottom: 2px;
+        border-bottom: 1px solid $accent-light;
+        font-weight: bold;
+    }
+}
+
+.user-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+
+    &__link {
+        position: relative;
+    }
+
+    &__inner-search {
+        position: relative;
+        padding: 17.5px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #edf1f4;
+    }
+
+    &__inner-shop {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding: 16.5px 40px;
+        width: 180px;
+        border-radius: 25px;
+        background-color: #fcd7b6;
+
+        &::before {
+            content: "";
+            position: absolute;
+            right: 90px;
+            top: 10px;
+            z-index: 2;
+            width: 1px;
+            height: 30px;
+            background-color: #fde7d3;
+        }
+    }
+
+    &__inner-dots {
+        padding: 15px;
+        width: 50px;
+        border-radius: 50%;
+        background-color: $btn;
+    }
+
+    &__num {
+        position: absolute;
+        right: -8px;
+        top: -7px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        font-size: 10px;
+        line-height: 15px;
+        text-align: center;
+        color: $accent;
+        background-color: #fff;
+
+        @extend %dmsans-400;
+    }
+}
+
+@media (max-width: 1200px) {
+    .menu {
+        &__list {
+            position: relative;
+        }
+    }
+}
+
+@media (max-width: 1050px) {
+    .menu {
+        &__list {
+            position: absolute;
+            left: 0;
+            top: 105px;
+            z-index: 5;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            background-color: #fff;
+            transform: translateY(-200%);
+            transition: all 0.3s;
+
+            &.menu__list--active {
+                transform: translateY(0%);
+                transition: all 0.3s;
+            }
+        }
+
+        &__list-item + .menu__list-item {
+            padding-left: 0;
+        }
+
+        &__list-item {
+            padding: 5px 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        &__list-link {
+            display: block;
+            padding: 5px 0;
+            width: 100%;
+        }
+
+        &__btn {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            width: 30px;
+            height: 22px;
+            border: none;
+            background-color: transparent;
+            transition: all 0.3s;
+
+            &::after,
+            &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 3px;
+                background-color: $accent;
+            }
+
+            &::before {
+                top: 0;
+            }
+
+            &::after {
+                bottom: 0;
+            }
+
+            span {
+                width: 100%;
+                height: 3px;
+                background-color: $accent;
+            }
+
+            &.menu__btn--active {
+                transition: all 0.3s;
+
+                &::before {
+                    top: 9px;
+                    border-radius: 3px;
+                    transform: rotate(-45deg);
+                }
+
+                &::after {
+                    bottom: 10px;
+                    border-radius: 3px;
+                    transform: rotate(45deg);
+                }
+
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .logo {
+        order: -2;
+    }
+
+    .user-nav {
+        order: -1;
+    }
+}
+
+@media (max-width: 600px) {
+    .menu {
+        &__btn {
+            margin-left: 100px;
+        }
+    }
+
+    .user-nav {
+        order: 0;
+        margin-top: 25px;
+        margin-left: auto;
+    }
+}
